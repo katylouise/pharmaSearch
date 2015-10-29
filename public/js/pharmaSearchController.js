@@ -1,0 +1,3 @@
+pharmaSearch.controller('PharmaSearchController', [function() {
+
+}]);
