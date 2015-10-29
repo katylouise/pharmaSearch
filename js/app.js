@@ -1,0 +1,1 @@
+var pharmaSearch = angular.module('PharmaSearch', ['ngResource']);
