@@ -6,8 +6,12 @@ pharmaSearch.controller('PharmaSearchController', ['$http', function($http) {
       method: 'GET',
       url: 'http://www.serket.uk/pharmacies/pharmacylist-format'
     }).then(function(response) {
-      self.searchResult = response.data.data.searchThroughArray(self.searchTerm)
-    })
+      self.searchResult = response.data.data.searchThroughArray(self.searchTerm);
+    });
+  };
+
+  self.getDetails = function(pharmacy) {
+    self.pharmacy = pharmacy;
   };
 
 }]);
