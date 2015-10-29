@@ -55,3 +55,7 @@
 .pharmacy-info {
   font-family: Avenir Next !important;
 }
+
+.panel {
+  width: 500px;
+}
