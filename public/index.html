@@ -18,17 +18,16 @@
 </head>
 
 <body ng-controller="PharmaSearchController as searchCtrl">
-  <nav class="navbar">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <form class="form-inline navbar-form pull-right">
-      <input class="form-control searchinput" type="text" placeholder="Search" ng-model="searchCtrl.searchTerm">
-      <button class="btn btn-success-outline searchbutton" ng-click="searchCtrl.doSearch()">Search</button>
+  <nav class="navbar nav-cstm">
+    <p class="navbar-brand">pharmaSearch</p>
+    <form ng-submit="searchCtrl.doSearch()" class="form-inline navbar-form search-form">
+      <input class="form-control searchinput" type="text" placeholder="Find a Pharmacy" ng-model="searchCtrl.searchTerm">
     </form>
   </nav>
 
   <div class="col-md-4">
     <ul class="list-group list-group-flush resultslist">
-      <li class="list-group-item" ng-repeat="pharmacy in searchCtrl.searchResult" ng-click='searchCtrl.getDetails(pharmacy)'>
+      <li class="list-group-item pharmacy-info" ng-repeat="pharmacy in searchCtrl.searchResult" ng-click='searchCtrl.getDetails(pharmacy)'>
         <div class="name">{{ pharmacy[0] }}</div>
         <div class="postcode">{{ pharmacy[7] }}</div>
         <div class="phone"> {{ pharmacy[8] }}</div>
@@ -36,7 +35,7 @@
     </ul>
   </div>
 
-  <div class="col-md-8 detailed-view">
+  <div class="col-md-8 detailed-view map-container">
     <div ng-if='searchCtrl.pharmacy' >
       <p>{{ searchCtrl.pharmacy[0] }}</p>
       <p>{{ searchCtrl.pharmacy[1] }}</p>

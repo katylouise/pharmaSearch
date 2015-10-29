@@ -1,3 +1,7 @@
+* {
+  font-family: 24px Avenir Next !important;
+}
+
 .col-md-4.col-md-8 {
   border-style: solid;
   border-color: black;
@@ -7,4 +11,47 @@
   width: 500px;
   height: 400px;
   background-color: #CCC;
+}
+
+.search-form {
+  text-align: center;
+  width:500px;
+  margin: 9px auto;
+}
+
+.searchinput {
+  width: 500px !important;
+  height: 50px !important;
+  text-align: center;
+  font-size: 22px;
+  padding: 0 !important;
+}
+
+.searchbutton {
+  height: 50px !important;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  weight: lighter;
+  margin-top: 8px;
+}
+
+.nav-cstm {
+  height: 70px;
+  background-color: #107E7D;
+  color: white;
+  border-radius: 0;
+}
+
+.form-control {
+  padding: 0;
+}
+
+.map-container {
+  padding: 0;
+}
+
+.pharmacy-info {
+  font-family: Avenir Next !important;
 }
