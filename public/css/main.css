@@ -2,3 +2,9 @@
   border-style: solid;
   border-color: black;
 }
+
+#map {
+  width: 500px;
+  height: 400px;
+  background-color: #CCC;
+}
