@@ -1,8 +1,13 @@
-pharmaSearch.controller('PharmaSearchController', ['$resource', function($resource) {
+pharmaSearch.controller('PharmaSearchController', ['$http', function($http) {
   var self = this;
-  var searchResource = $resource('http://www.serket.uk/pharmacies/pharmacylist-format');
+
   self.doSearch = function() {
-    self.searchResult = searchResource.get();
+    $http({
+      method: 'GET',
+      url: 'http://www.serket.uk/pharmacies/pharmacylist-format'
+    }).then(function(response) {
+      self.searchResult = response.data.data.searchThroughArray(self.searchTerm)
+    })
   };
 
 }]);
