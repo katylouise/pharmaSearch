@@ -6,7 +6,7 @@ describe('Pharma Search', function() {
   var detailedView = element(by.css('.detailed-view'));
 
   beforeEach(function() {
-    browser.get('http://localhost:3000');
+    browser.get('http://localhost:8080');
   });
 
   it('has a title', function() {
@@ -23,6 +23,6 @@ describe('Pharma Search', function() {
     searchinput.sendKeys('Morpeth Pharmacy');
     searchbutton.click();
     resultColumn.get(0).click();
-    expect(detailedView.getText()).toContain('Morpeth Pharmacy')
+    expect(detailedView.getText()).toContain('Morpeth Pharmacy','FVK52')
   });
 });
