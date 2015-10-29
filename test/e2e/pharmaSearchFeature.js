@@ -4,17 +4,16 @@ describe('Pharma Search', function() {
   var searchbutton = element(by.css('.searchbutton'));
 
 
- it('has a title', function() {
-   browser.get('http://localhost:8080');
+  it('has a title', function() {
+    browser.get('http://localhost:8080');
+    expect(browser.getTitle()).toEqual('PharmaSearch');
+  });
 
-   expect(browser.getTitle()).toEqual('PharmaSearch');
- });
-
-it('displays results when user searches', function() {
-  browser.get('http://localhost:8080');
-  searchinput.sendKeys('LloydsPharmacy');
-  searchbutton.click();
-  expect(resultslist.getText()).toContain("LloydsPharmacy")
-})
+  it('displays results when user searches', function() {
+    browser.get('http://localhost:8080');
+    searchinput.sendKeys('Morpeth Pharmacy');
+    searchbutton.click();
+    expect(resultslist.getText()).toContain("Morpeth Pharmacy")
+  });
 
 });
